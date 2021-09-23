@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //solution for add7 function
+        function add7(a, b, result)
+        {
+            a = 7;
+            b = prompt("enter a number to add with 7");
+            result = +a + +b;
+            return result;
+        }
+        console.log(add7());
+
+        //solution for multipy function
+        function multiply(a,b,result)
+        {
+           a = prompt("enter a number to multiply");
+           b = prompt("enter a number to multiply with");
+           result = a*b;
+           return result;
+        }
+        console.log(multiply());
+
+        //solution for capitiize function
+        function capitilize(a)
+        {
+            a = prompt("enter a string");
+           return a[0].toUpperCase() + a.slice(1).toLowerCase();
+        }
+        console.log(capitilize());
+
+        //solution for lastletter function
+        function lastLetter()
+        {
+            a = prompt("Enter a string");
+            b = a.slice(-1);
+            c = b.toUpperCase();
+            return c; 
+        } 
+        console.log(lastLetter());
+        </script>
+</body>
+</html>
