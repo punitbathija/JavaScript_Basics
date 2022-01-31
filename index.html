@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = // Object Literal
+        {
+            name : 'Punit', 
+            city : 'Mumbai', // city, name, age is the key or also known as identifier
+            age : 23,
+            'is Cool' : true // we can also use multi-word property name but they should be quoted
+        };
+// Any type of data can be added to an object
+
+        alert(user.age); // dot notaion is used to access the values 
+
+        user.isCool = true; // Adding a boolean to the object literal 
+
+        delete user.isCool; // We can also delete a property from an object
+
+
+        let personalDetails = 
+        {
+            'First Name' : 'Punit',
+            'Last Name' : 'Bathija', // Multiword properties cannot be accessed by dot notaion square brackets are used instead
+             Age : 23,
+             Mobile : 9999999999, // the last property may end with a comma because it becomes eaiser to add remove or move auround properties
+        }                         // its called trailing
+
+        //bracket notation
+
+        user ['likes bird'] = false; // set
+        
+        alert(user['likes bird']); // get
+        
+        delete user['likes bird']; // delete
+
+        console.log(user);
+
+        // the key can be used to access a object property the variable key is calculated at the run time that gives us a great deal of flexiblity
+
+        let key = prompt('what do you want to know about the user?', 'name');
+        key = 'Age';
+        alert(user[key]);
+        alert(personalDetails.key);
+
+        // Computed Properties
+
+        let fruit = prompt('Which fruit to buy?', 'apple');
+
+        let bag = 
+        {
+            [fruit] : 5,
+        };
+
+        alert(bag.apple);
+
+        // the meaning of computed property is simple means that the property name should be taken from fruit
+        // Square brackets are much more powerful than the dot notation
+
+        // in real code we always use the exsisting variables as values for property names
+
+        function makeUser(name, age)
+        {
+        return{
+                name : name, // we can write this in short hand as well as just name and age
+                age : age, 
+               };
+        }
+        let nUser = makeUser('john', 40);
+        alert(nUser.name);
+
+        //In short, there are no limitations on property names. They can be any strings or symbols
+  
+        // the use of in keyword in Obejcts
+
+        let newUser = 
+        {
+            name : 'goo',
+            age : 33,
+        }
+
+        alert('name' in newUser);
+
+        // we can also use the in operation with the keyword key
+        // the in keyword may also show undefiend as a value
+
+        // The for...in loop
+        // to walk over all the values inside an object there exsist a differrent kind of loop
+        // the for...in loop works using the integer property to display results
+        // char are listed in creation order
+        let newUser = 
+        {
+            name : 'john',
+            age : 33,
+            isAdmin : true,
+        }
+
+        for (let properties in newUser)
+        {
+            alert(newUser[properties]);
+        }
+
+  </script>
+</body>
+</html>
